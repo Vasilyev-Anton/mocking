@@ -2,7 +2,6 @@ import getLevel from '../app';
 import fetchData from '../http';
 
 jest.mock('../http');
-
 test('should return level info for status "ok"', () => {
   fetchData.mockReturnValue({ status: 'ok', level: 30 });
   expect(getLevel(1)).toBe('Ваш текущий уровень: 30');
